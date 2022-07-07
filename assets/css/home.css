@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+display: flex;
+}
+
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 56px;
+    background-color: #0e365a; 
+   
+}
+
+.right-nav{
+    margin-left: auto;
+}
+
+.left{
+    align-items:center;
+}
+
+.left li{
+    list-style:none;
+    padding: 16px;
+}
+
+.left li a{
+    margin: 12px;
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.left li a:hover{
+    color:gray;
+ }
+
+
+.nav-list{
+    display: flex;
+    align-items:center;
+}
+
+.nav-list li{
+    list-style:none;
+    padding: 16px;
+}
+
+.nav-list li a{
+    margin: 12px;
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+.name{
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    margin: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    
+}
+
+img.icon{
+    height: 50px;
+}
+
+.nav-list li a:hover{
+   color:gray;
+}
+
+.content{
+    /* margin-top: 16px; */
+    width: 100%;
+    height: 663px;
+    background: -webkit-linear-gradient(left, #6f9ee9, #86f1ec);
+    margin-top: 50px;
+    flex-wrap: wrap;
+    
+}
+.quotes{
+    width: 100%;
+    height: 150px;
+  
+
+}
+.startup{
+    width: 50%;
+    height: 500px;
+    /* background-color: rgb(76, 104, 145); */
+    margin: auto;
+   
+}
+
+.medical{
+    /* background-color: rgb(76, 104, 145); */
+    width: 50%;
+    height: 500px;
+    margin: auto;
+   
+}
+
+img.thumb{
+    height: 400px;
+    display: block;
+    margin: auto;
+}
+
+.homebutton {margin-top: 1rem;
+    transition-duration: 0.4s;
+    background-color: #007a99;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 240px;
+  }
+  
+.homebutton:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.pageFooter{
+    bottom: 0;
+    width: 100%;
+}
+
+.footerIcon{
+    border-radius: 50%;
+    width: 42px;
+}

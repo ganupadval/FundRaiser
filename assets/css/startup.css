@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+display: flex;
+}
+
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 56px;
+    background-color: #0e365a; 
+   
+}
+
+.right-nav{
+    margin-left: auto;
+}
+
+.left{
+    align-items:center;
+}
+
+.left li{
+    list-style:none;
+    padding: 16px;
+}
+
+.left li a{
+    margin: 12px;
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.left li a:hover{
+    color:gray;
+ }
+
+
+.nav-list{
+    display: flex;
+    align-items:center;
+}
+
+.nav-list li{
+    list-style:none;
+    padding: 16px;
+}
+
+.nav-list li a{
+    margin: 12px;
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+.name{
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    margin: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    
+}
+
+img.icon{
+    height: 50px;
+}
+
+.nav-list li a:hover{
+   color:gray;
+}
+
+.content{
+    /* margin-top: 16px; */
+    width: 100%;
+    background-color:  rgb(161, 182, 213);
+    margin-top: 56px;
+    flex-wrap: wrap;
+    display: flex;
+    
+}
+
+.quotes{
+    width: 100%;
+    height: 150px;
+  
+
+}
+.startup{
+    width: 50%;
+    height: 500px;
+    /* background-color: rgb(76, 104, 145); */
+    margin: auto;
+    opacity: 0.8;
+}
+
+.medical{
+    /* background-color: rgb(76, 104, 145); */
+    width: 50%;
+    height: 500px;
+    margin: auto;
+    opacity: 0.8;
+}
+
+img.thumb{
+    height: 400px;
+    display: block;
+    margin: auto;
+}
+
+.homebutton {margin-top: 1rem;
+    transition-duration: 0.4s;
+    background-color: #007a99;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 240px;
+  }
+  
+.homebutton:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+.pageFooter{
+    bottom: 0;
+    width: 100%;
+}
+
+.footerIcon{
+    border-radius: 50%;
+    width: 42px;
+}
+
+.card1{
+    width: 30%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background: #000;
+}
+
+.album1{
+    
+    
+    background-color: rgb(198, 241, 243);
+    
+}
+.imgContainer{
+    width: 45%;
+    height: fit-content;
+}
+
+img{
+
+    width: -webkit-fill-available;
+    
+   
+}
+
+.startUpFooter{
+    background-color: #298ee5;
+}
+#countdown-wrap {
+width: 100%;
+height: 150px;
+
+padding: 10px;
+font-family: arial;
+}
+
+#goal {
+font-size: 28px;
+text-align: center;
+width: 80%;
+color: #fff;
+margin: auto;
+
+}
+
+#glass {
+width: 80%;
+height: 10px;
+background: #c7c7c7;
+border-radius: 10px;
+margin: auto;
+overflow: hidden;
+}
+
+#progress {
+float: left;
+width: 16%;
+height: 10px;
+background: #AB2430;
+z-index: 333;
+border-radius: 5px;
+}
+
+.contentWrap{
+text-align: center; 
+display: flex; 
+justify-content:center
+}
+
+.goal-stat {
+width: 20%;
+height: 30px;
+padding: 10px;
+float: left;
+margin: 0;
+
+}
+
+.goal-number, .goal-label {
+display: block;
+margin: auto;
+}
+
+.goal-number {
+font-weight: bold;
+}
+.navButtons{
+    justify-content: space-evenly;
+    padding: 10px;
+    height: 60px;
+}
+.album1.p{
+    width: 55%;
+    height: fit-content;
+
+}
+
+.albumTitle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(20, 69, 98) ;
+    text-align: center;
+    margin: 10px;
+}
+.button_support {
+    background-color:#febf0f;
+    border: 1px solid #febf0f;
+    border-radius: 0 5px 5px 0;
+    margin-left: -2px;
+    padding: var(--space1) var(--space2);
+    font-size: var(--base);
+    font-weight: var(--bold);
+    color: var(--grape);
+    flex: 5;
+    height: 35px;
+}
+
+.ammount{
+    width: 50%;
+    height: 35px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #febf0f;
+    text-align: center;
+}
+
+.ru_symbol{
+color: rgb(128, 128, 128);
+margin-left: 2px;
+margin-right: 2px;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+box-sizing: border-box;
+}

@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href={% static 'css/contactUs.css' %}>
+    <link rel="icon" type="image/x-icon" href={% static 'images/icon.png' %}>
+    <title>Contact Us</title>
+</head>
+<body>
+<div class="header">
+        <div class="name">
+        <img class="icon" src={% static 'images/icon.png' %} alt="icon"></img>
+        <a>FundCorp</a>
+        </div>
+      
+            <div class="left-nav">
+            <ul class="nav-list" style="margin-bottom:0">
+              <li><a href="{% url 'home' %}">Home</a></li>
+              {% comment %} <li><a href="#About Us">About Us</a></li> {% endcomment %}
+              {% comment %} <li><a href="/contactUs/">Contact Us</a></li> {% endcomment %}
+                
+            </ul>
+            </div> 
+            <div class="right-nav" style="display:flex">
+              <ul class="nav-list" style="margin-bottom:0">
+                {% if user.is_authenticated %}
+                <li><a style="color: white;">Hello, {{user.first_name}}</a></li>
+                <li><a href="/accounts/logout/">Logout</a></li>
+                {% else %}	
+                <li><a href="/accounts/signup/">Register</a></li>
+                <li><a href="/accounts/signin/">Sign In</a></li>
+                {% endif %}
+              </ul>
+            </div>
+</div>
+        
+    <div class="container contact-form">
+        <div class="contact-image">
+            <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <h3>Drop Us a Message</h3>
+           <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name *" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email *" />
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number *" />
+                    </div>
+                   
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="msg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        {% for message in messages %}
+                        <h5> {{message}}  </h5>
+                        {% endfor %}
+                      </div>
+                    <input type="submit" name="btnSubmit" class="btnContact" value="Send Message"/>
+                </div>
+            </div>
+        </form>
+</div>
+
+<footer class="bg-light text-center text-white pageFooter">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+        <!-- Facebook -->
+        <a
+            class="btn btn-primary btn-floating m-1 footerIcon"
+            style="background-color: #3b5998; border-radius: 50%;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+        ></a>
+    
+        <!-- Twitter -->
+        <a
+            class="btn btn-primary btn-floating m-1 footerIcon"
+            style="background-color: #55acee;border-radius: 50%;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter"></i
+        ></a>
+    
+        <!-- Google -->
+        <a
+            class="btn btn-primary btn-floating m-1 footerIcon"
+            style="background-color: #dd4b39;border-radius: 50%;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-google"></i
+        ></a>
+    
+        <!-- Instagram -->
+        <a
+            class="btn btn-primary btn-floating m-1 footerIcon"
+            style="background-color: #ac2bac;border-radius: 50%;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+        ></a>
+    
+        <!-- Linkedin -->
+        <a
+            class="btn btn-primary btn-floating m-1 footerIcon"
+            style="background-color: #0082ca;border-radius: 50%;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <!-- Github -->
+        <a
+            class="btn btn-primary btn-floating m-1 footerIcon"
+            style="background-color: #333333;border-radius: 50%;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-github"></i
+        ></a>
+        </section>
+        <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+    
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" href="https://github.com/ganupadval">Ganesh Padval</a>
+    </div>
+    <!-- Copyright -->
+    </footer>
+</body>
+</html>
