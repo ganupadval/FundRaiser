@@ -43,7 +43,7 @@ def startup(request):
            
         param_dict={
 
-                'MID': 'DIY12386817555501617',
+                'MID': '',
                 'ORDER_ID': 'id',
                 'TXN_AMOUNT': '750.00',
                 'CUST_ID': 'id',
@@ -53,7 +53,7 @@ def startup(request):
                 'CALLBACK_URL':'http://127.0.0.1:8000/payments/handlerequest/',
 
         }
-        param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(param_dict, merchant_key="dAxW6pXHAvPraE#_")
+        param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(param_dict, merchant_key="")
         return  render(request, 'paytm.html', {'param_dict': param_dict})
        
     else:
